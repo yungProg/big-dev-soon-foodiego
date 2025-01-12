@@ -146,7 +146,7 @@ a {
   text-align: center;
 }
 
-.create-account-wrapper, .browse {
+.create-account-btn, .browse {
   background: var(--primary-color2);
   padding: 10px 15px;
   border-radius: 20px;
