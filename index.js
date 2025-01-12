@@ -1,6 +1,14 @@
-/* This is an example JavaScript file, feel free to remove/edit it anytime */
-console.log(
-  "%cProject by BigDevSoon",
-  'font-size: 40px; font-weight: bold; color: #8A2BE2; font-family: "Comic Sans MS", cursive, sans-serif;'
-);
-console.log("Check out more projects at https://bigdevsoon.me");
+const slider = document.querySelector(".slider")
+const deliveryMethod = document.querySelectorAll(".delivery-method")
+const cart = document.querySelector(".cart")
+const cartOpen = document.querySelector('.cart-open')
+
+function slide(index){
+  deliveryMethod.forEach( item => item.classList.remove("active"))
+  deliveryMethod[index].classList.add('active')
+  index == 0 ? slider.classList.remove('slide-right') : slider.classList.add('slide-right')
+}
+
+cart.addEventListener('click', () => {
+  cartOpen.classList.toggle('hide')
+})
