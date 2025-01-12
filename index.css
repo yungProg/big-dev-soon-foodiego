@@ -159,6 +159,7 @@ a {
 
 .cart-open {
   position: absolute;
+  z-index: 200;
   background-color: var(--primary-color1);
   border-radius: 10px;
   display: flex;
