@@ -77,6 +77,78 @@
         <a href="#" class="browse">Start shopping</a>
       </div>
     </header>
+    <main class="main">
+      <div class="food-filters-wrapper">
+        <button onclick="moveLeft()" type="button" class="scroll left">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.0001 11.9999C3.0001 12.3978 3.15813 12.7793 3.43944 13.0606C3.72075 13.3419 4.10227 13.4999 4.5001 13.4999H16.3801L12.4401 17.4399C12.1751 17.7243 12.0309 18.1004 12.0377 18.489C12.0446 18.8776 12.202 19.2484 12.4769 19.5232C12.7517 19.798 13.1225 19.9554 13.5111 19.9623C13.8997 19.9691 14.2757 19.8249 14.5601 19.5599L21.0601 13.0599C21.341 12.7787 21.4988 12.3974 21.4988 11.9999C21.4988 11.6024 21.341 11.2212 21.0601 10.9399L14.5601 4.43994C14.4228 4.29257 14.2572 4.17436 14.0732 4.09238C13.8892 4.0104 13.6905 3.96631 13.4891 3.96276C13.2877 3.9592 13.0877 3.99625 12.9009 4.0717C12.7141 4.14714 12.5445 4.25943 12.402 4.40186C12.2596 4.5443 12.1473 4.71397 12.0719 4.90075C11.9964 5.08752 11.9594 5.28758 11.9629 5.48899C11.9665 5.69039 12.0106 5.88902 12.0925 6.07302C12.1745 6.25702 12.2927 6.42262 12.4401 6.55994L16.3801 10.4999H4.5001C3.6721 10.4999 3.0001 11.1719 3.0001 11.9999Z" fill="black"/>
+          </svg>
+        </button>
+        <div class="food-filters-container"></div>
+        <button onclick="moveRight()" type="button" class="scroll right">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.0001 11.9999C3.0001 12.3978 3.15813 12.7793 3.43944 13.0606C3.72075 13.3419 4.10227 13.4999 4.5001 13.4999H16.3801L12.4401 17.4399C12.1751 17.7243 12.0309 18.1004 12.0377 18.489C12.0446 18.8776 12.202 19.2484 12.4769 19.5232C12.7517 19.798 13.1225 19.9554 13.5111 19.9623C13.8997 19.9691 14.2757 19.8249 14.5601 19.5599L21.0601 13.0599C21.341 12.7787 21.4988 12.3974 21.4988 11.9999C21.4988 11.6024 21.341 11.2212 21.0601 10.9399L14.5601 4.43994C14.4228 4.29257 14.2572 4.17436 14.0732 4.09238C13.8892 4.0104 13.6905 3.96631 13.4891 3.96276C13.2877 3.9592 13.0877 3.99625 12.9009 4.0717C12.7141 4.14714 12.5445 4.25943 12.402 4.40186C12.2596 4.5443 12.1473 4.71397 12.0719 4.90075C11.9964 5.08752 11.9594 5.28758 11.9629 5.48899C11.9665 5.69039 12.0106 5.88902 12.0925 6.07302C12.1745 6.25702 12.2927 6.42262 12.4401 6.55994L16.3801 10.4999H4.5001C3.6721 10.4999 3.0001 11.1719 3.0001 11.9999Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+      <section class="main-content">
+        <div class="filter-container">
+          <div class="filter-wrapper">
+            <label for="open-now">Open now</label>
+            <input type="checkbox" name="open-now" id="open-now">
+          </div>
+          <div class="filter-wrapper">
+            <label for="free-delivery">Free delivery</label>
+            <input type="checkbox" name="free-delivery" id="free-delivery">
+          </div>
+          <div class="filter-wrapper">
+            <p>Rating</p>
+            <div class="stars-container"></div>
+          </div>
+        </div>
+        <div class="restaurants-lists">
+          <div class="find-wrapper">
+            <input type="search" name="search-restaurant" id="search-restaurant" placeholder="What do you want to eat today?">
+            <button class="sort-by" type="button">
+              <span></span>
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 15.2071C12.3166 15.5976 11.6834 15.5976 11.2929 15.2071L6.29289 10.2071C5.90237 9.81658 5.90237 9.18342 6.29289 8.79289C6.68342 8.40237 7.31658 8.40237 7.70711 8.79289L12 13.0858L16.2929 8.79289C16.6834 8.40237 17.3166 8.40237 17.7071 8.79289C18.0976 9.18342 18.0976 9.81658 17.7071 10.2071L12.7071 15.2071Z" fill="black"/>
+                </svg>                  
+              </span>
+            </button>
+            <div class="sort">
+              <h3 class="bold">Sort by</h3>
+              <div class="sort-options">
+                <div>
+                  <input type="radio" name="sort-option" id="recommend">
+                  <label for="recommend">Recommend</label>
+                </div>
+                <hr>
+                <div>
+                  <input type="radio" name="sort-option" id="a-z">
+                  <label for="a-z">Alphabetical order (A-Z)</label>
+                </div>
+                <hr>
+                <div>
+                  <input type="radio" name="sort-option" id="z-a">
+                  <label for="z-a">Alphabetical order (Z-A)</label>
+                </div>
+                <hr>
+                <div>
+                  <input type="radio" name="sort-option" id="distance">
+                  <label for="distance">Distance</label>
+                </div>
+              </div>
+              <div class="confirmation-wrapper">
+                <button class="cancel" type="button">Cancel</button>
+                <button class="submit" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
    </div>
   </body>
 </html>
