@@ -257,6 +257,16 @@ a {
   border-radius: 2rem;
 }
 
+.filter-container {
+  background-color: burlywood;
+  width: 170px;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sort {
   background-color: pink;
   width: 100%;
