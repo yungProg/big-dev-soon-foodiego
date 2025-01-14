@@ -259,12 +259,45 @@ a {
 
 .filter-container {
   background-color: burlywood;
-  width: 170px;
+  flex: 170px 0 0;
 }
 
 .filter-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.restaurants-lists {
+  background-color: slategrey;
+  flex: calc(100% - 170px - 1rem) 0 0;
+}
+
+.find-wrapper {
+  display: flex;
+  gap: 4rem;
+  padding: 0 12px;
+  position: relative;
+}
+
+.search {
+  flex: 80% 0 1;
+  border: none;
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 4px 12px 4px 24px;
+}
+
+.search-icon {
+  position: absolute;
+}
+
+.sort-by {
+  flex: 150px 0 0;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px;
 }
 
 .sort {
@@ -274,7 +307,14 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 1rem ;
+  padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+.hide {
+  display: none;
 }
 
 .sort-options > div:not(:first-of-type) {

@@ -3,6 +3,8 @@ const deliveryMethod = document.querySelectorAll(".delivery-method")
 const cart = document.querySelector(".cart")
 const cartOpen = document.querySelector('.cart-open')
 const foodFiltersContainer = document.querySelector('.food-filters-container')
+const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelector('.cancel')]
+const sortPopUpBox = document.querySelector(".sort") 
 
 const foods = [
     {
@@ -119,3 +121,7 @@ function moveLeft() {
 function moveRight() {
   foodFiltersContainer.scrollLeft += 250;
 }
+
+toggleSortPopUp.forEach(element => element.addEventListener('click', () => {
+  sortPopUpBox.classList.toggle('hide')
+}))
