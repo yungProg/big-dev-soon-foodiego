@@ -267,6 +267,16 @@ a {
   justify-content: space-between;
 }
 
+.star-wrapper svg path {
+  fill-rule: evenodd;
+  fill: #000;
+}
+
+.star-wrapper.filled path {
+  fill-rule: nonzero;
+  fill: var(--primary-color2);
+}
+
 .restaurants-lists {
   background-color: slategrey;
   flex: calc(100% - 170px - 1rem) 0 0;

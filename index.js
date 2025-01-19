@@ -6,6 +6,11 @@ const foodFiltersContainer = document.querySelector('.food-filters-container')
 const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelector('.cancel')]
 const sortPopUpBox = document.querySelector(".sort")
 const freeDeliveryRadio = document.querySelector('.free-delivery')
+const stars = document.querySelectorAll('.star-wrapper')
+
+let currentRating = 0;
+let isOpenNow = true;
+let isFreeDelivery = false
 
 const foods = [
     {
@@ -92,6 +97,27 @@ function slide(index){
     freeDeliveryRadio.setAttribute('disabled', true)
   }
 }
+
+function highlightStars(rating) {
+  stars.forEach((star, index) => {
+    if (index < rating) {
+      star.classList.add('filled')
+    } else {
+      star.classList.remove('filled')
+    }
+  })
+}
+
+stars.forEach((star) => {
+  star.addEventListener('mouseover', () => {
+    const value = star.getAttribute('data-value')
+    highlightStars(value)
+  })
+  star.addEventListener('click', () => {
+    currentRating = star.getAttribute('data-value')
+  })
+  star.addEventListener('mouseout', () => highlightStars(currentRating))
+})
 
 cart.addEventListener('click', () => {
   cartOpen.classList.toggle('hide')
