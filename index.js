@@ -4,7 +4,8 @@ const cart = document.querySelector(".cart")
 const cartOpen = document.querySelector('.cart-open')
 const foodFiltersContainer = document.querySelector('.food-filters-container')
 const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelector('.cancel')]
-const sortPopUpBox = document.querySelector(".sort") 
+const sortPopUpBox = document.querySelector(".sort")
+const freeDeliveryRadio = document.querySelector('.free-delivery')
 
 const foods = [
     {
@@ -83,7 +84,13 @@ const foods = [
 function slide(index){
   deliveryMethod.forEach( item => item.classList.remove("active"))
   deliveryMethod[index].classList.add('active')
-  index == 0 ? slider.classList.remove('slide-right') : slider.classList.add('slide-right')
+  if (index == 0) {
+    slider.classList.remove('slide-right')
+    freeDeliveryRadio.removeAttribute('disabled')
+  } else {
+    slider.classList.add('slide-right')
+    freeDeliveryRadio.setAttribute('disabled', true)
+  }
 }
 
 cart.addEventListener('click', () => {
