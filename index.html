@@ -3,7 +3,7 @@
   <head>
     <bds />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
     <title>BigDevSoon - FoodieGo Project</title>
   </head>
   <body>
@@ -79,13 +79,13 @@
     </header>
     <main class="main">
       <div class="food-filters-wrapper">
-        <button onclick="moveLeft()" type="button" class="scroll left">
+        <button type="button" class="scroll left">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.0001 11.9999C3.0001 12.3978 3.15813 12.7793 3.43944 13.0606C3.72075 13.3419 4.10227 13.4999 4.5001 13.4999H16.3801L12.4401 17.4399C12.1751 17.7243 12.0309 18.1004 12.0377 18.489C12.0446 18.8776 12.202 19.2484 12.4769 19.5232C12.7517 19.798 13.1225 19.9554 13.5111 19.9623C13.8997 19.9691 14.2757 19.8249 14.5601 19.5599L21.0601 13.0599C21.341 12.7787 21.4988 12.3974 21.4988 11.9999C21.4988 11.6024 21.341 11.2212 21.0601 10.9399L14.5601 4.43994C14.4228 4.29257 14.2572 4.17436 14.0732 4.09238C13.8892 4.0104 13.6905 3.96631 13.4891 3.96276C13.2877 3.9592 13.0877 3.99625 12.9009 4.0717C12.7141 4.14714 12.5445 4.25943 12.402 4.40186C12.2596 4.5443 12.1473 4.71397 12.0719 4.90075C11.9964 5.08752 11.9594 5.28758 11.9629 5.48899C11.9665 5.69039 12.0106 5.88902 12.0925 6.07302C12.1745 6.25702 12.2927 6.42262 12.4401 6.55994L16.3801 10.4999H4.5001C3.6721 10.4999 3.0001 11.1719 3.0001 11.9999Z" fill="black"/>
           </svg>
         </button>
         <div class="food-filters-container"></div>
-        <button onclick="moveRight()" type="button" class="scroll right">
+        <button type="button" class="scroll right">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.0001 11.9999C3.0001 12.3978 3.15813 12.7793 3.43944 13.0606C3.72075 13.3419 4.10227 13.4999 4.5001 13.4999H16.3801L12.4401 17.4399C12.1751 17.7243 12.0309 18.1004 12.0377 18.489C12.0446 18.8776 12.202 19.2484 12.4769 19.5232C12.7517 19.798 13.1225 19.9554 13.5111 19.9623C13.8997 19.9691 14.2757 19.8249 14.5601 19.5599L21.0601 13.0599C21.341 12.7787 21.4988 12.3974 21.4988 11.9999C21.4988 11.6024 21.341 11.2212 21.0601 10.9399L14.5601 4.43994C14.4228 4.29257 14.2572 4.17436 14.0732 4.09238C13.8892 4.0104 13.6905 3.96631 13.4891 3.96276C13.2877 3.9592 13.0877 3.99625 12.9009 4.0717C12.7141 4.14714 12.5445 4.25943 12.402 4.40186C12.2596 4.5443 12.1473 4.71397 12.0719 4.90075C11.9964 5.08752 11.9594 5.28758 11.9629 5.48899C11.9665 5.69039 12.0106 5.88902 12.0925 6.07302C12.1745 6.25702 12.2927 6.42262 12.4401 6.55994L16.3801 10.4999H4.5001C3.6721 10.4999 3.0001 11.1719 3.0001 11.9999Z" fill="black"/>
           </svg>
@@ -95,7 +95,7 @@
         <div class="filter-container">
             <label class="filter-wrapper" for="open-now">
               <span>Open now</span>
-              <input type="checkbox" name="open-now" id="open-now">
+              <input checked type="checkbox" name="open-now" id="open-now">
             </label>
             <label class="filter-wrapper" for="free-delivery">
               <span>Free delivery</span>
@@ -172,6 +172,50 @@
               <div class="confirmation-wrapper">
                 <button class="cancel" type="button">Cancel</button>
                 <button class="submit" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants-container">
+            <h2 class="number-opened">Order from 45 places</h2>
+            <div class="displayed-restaurants">
+              <div class="restaurant-card">
+                <img class="card-image" src="assets/images/baked-salmon-futomaki.jpg" alt="baked-salmon-futomaki">
+                <div class="restaurant-info">
+                  <h2 class="restaurant-name">Yamato Sushi</h2>
+                  <p class="cuisines">Sushi, Asian</p>
+                  <div class="card-footer">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_109_16473)">
+                        <path d="M10.9506 2.77518C11.0576 2.58634 11.2108 2.42965 11.395 2.32075C11.5792 2.21185 11.7879 2.15454 12.0004 2.15454C12.2128 2.15454 12.4215 2.21185 12.6057 2.32075C12.7899 2.42965 12.9432 2.58634 13.0501 2.77518L15.7669 7.57318L21.043 8.74918C21.2505 8.79557 21.4426 8.89713 21.6001 9.04371C21.7576 9.19029 21.875 9.37679 21.9406 9.5846C22.0062 9.79241 22.0177 10.0143 21.974 10.2281C21.9302 10.4419 21.8328 10.6402 21.6913 10.8032L18.0949 14.9442L18.6392 20.4692C18.6607 20.6867 18.6263 20.9063 18.5395 21.1059C18.4527 21.3055 18.3165 21.4782 18.1446 21.6067C17.9726 21.7353 17.7709 21.8151 17.5595 21.8384C17.3482 21.8616 17.1346 21.8274 16.9401 21.7392L12.0004 19.4992L7.0606 21.7392C6.86612 21.8274 6.65254 21.8616 6.44119 21.8384C6.22984 21.8151 6.02811 21.7353 5.85615 21.6067C5.68419 21.4782 5.54802 21.3055 5.46122 21.1059C5.37443 20.9063 5.34005 20.6867 5.36152 20.4692L5.90585 14.9442L2.30941 10.8042C2.16771 10.6412 2.07005 10.4428 2.02618 10.2289C1.9823 10.015 1.99374 9.79291 2.05935 9.58493C2.12496 9.37696 2.24246 9.19033 2.4001 9.04367C2.55774 8.89702 2.75002 8.79548 2.95774 8.74918L8.23382 7.57318L10.9506 2.77518Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_109_16473">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>                        
+                    </span>
+                    <div>
+                      <span class="rating">4.7</span>
+                      <span class="reviewers">(120+)</span>
+                    </div>
+                    <span>&centerdot;</span>
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.25 2C6.736 2 2.25 6.486 2.25 12C2.25 17.514 6.736 22 12.25 22C17.764 22 22.25 17.514 22.25 12C22.25 6.486 17.764 2 12.25 2ZM18 13H11.25V6H13.25V11H18V13Z" fill="black"/>
+                      </svg>                        
+                    </span>
+                    <span class="time">45-65 min</span>
+                    <span>&centerdot;</span>
+                    <span class="delivery-mode">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 15C19.55 15 20 15.45 20 16C20 16.55 19.55 17 19 17C18.45 17 18 16.55 18 16C18 15.45 18.45 15 19 15ZM19 13C17.34 13 16 14.34 16 16C16 17.66 17.34 19 19 19C20.66 19 22 17.66 22 16C22 14.34 20.66 13 19 13ZM10 6H5V8H10V6ZM17 5H14V7H17V9.65L13.5 14H10V9H6C3.79 9 2 10.79 2 13V16H4C4 17.66 5.34 19 7 19C8.66 19 10 17.66 10 16H14.5L19 10.35V7C19 6.46957 18.7893 5.96086 18.4142 5.58579C18.0391 5.21071 17.5304 5 17 5ZM7 17C6.45 17 6 16.55 6 16H8C8 16.55 7.55 17 7 17Z" fill="black"/>
+                      </svg>                      
+                    </span>
+                    <span class="delivery-charge">Free</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,3 +1,7 @@
+import { restaurants } from "./restaurants.js"
+console.log(restaurants);
+
+
 const slider = document.querySelector(".slider")
 const deliveryMethod = document.querySelectorAll(".delivery-method")
 const cart = document.querySelector(".cart")
@@ -147,13 +151,15 @@ function selectCategory(index) {
 
 makeFoodList()
 
-function moveLeft() {
-  foodFiltersContainer.scrollLeft -= 250;
-}
-
-function moveRight() {
+//move left or right
+document.querySelector('.scroll.right').addEventListener('click', () => {
   foodFiltersContainer.scrollLeft += 250;
-}
+})
+
+document.querySelector('.scroll.left').addEventListener('click', () => {
+  foodFiltersContainer.scrollLeft -= 250;
+})
+
 
 toggleSortPopUp.forEach(element => element.addEventListener('click', () => {
   sortPopUpBox.classList.toggle('hide')

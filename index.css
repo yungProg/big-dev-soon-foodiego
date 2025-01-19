@@ -269,7 +269,7 @@ a {
 
 .star-wrapper svg path {
   fill-rule: evenodd;
-  fill: #000;
+  fill: var(--primary-color2);
 }
 
 .star-wrapper.filled path {
@@ -346,3 +346,35 @@ a {
   padding: 8px 12px;
   border-radius: 24px;
 }
+
+.restaurants-container {
+  margin-top: 2vh;
+}
+
+.restaurant-card {
+  background-color: cornflowerblue;
+  display: flex;
+  gap: 8px;
+}
+
+.card-image {
+  width: 150px;
+  height: auto;
+}
+
+.cuisines {
+  color: #4b5563;
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-footer, .card-footer > * {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
