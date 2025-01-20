@@ -102,6 +102,12 @@ function slide(index){
   }
 }
 
+document.getElementById('delivery-btn').addEventListener('click', () => slide(0))
+document.getElementById('pickup-btn').addEventListener('click', () => {
+  slide(1)
+  freeDeliveryRadio.checked = false
+})
+
 function highlightStars(rating) {
   stars.forEach((star, index) => {
     if (index < rating) {
