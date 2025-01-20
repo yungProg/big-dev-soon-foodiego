@@ -259,7 +259,6 @@ a {
 }
 
 .filter-container {
-  background-color: burlywood;
   flex: 170px 0 0;
 }
 
@@ -279,7 +278,6 @@ a {
 }
 
 .restaurants-lists {
-  background-color: slategrey;
   flex: calc(100% - 170px - 1rem) 0 0;
 }
 
@@ -304,7 +302,6 @@ a {
 
 .sort-by {
   flex: 150px 0 0;
-  background-color: blueviolet;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -312,9 +309,9 @@ a {
 }
 
 .sort {
-  background-color: pink;
+  background-color: var(--primary-color1);
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 16px;
