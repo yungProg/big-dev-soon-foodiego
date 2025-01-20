@@ -1,6 +1,4 @@
 import { restaurants } from "./restaurants.js"
-console.log(restaurants);
-
 
 const slider = document.querySelector(".slider")
 const deliveryMethod = document.querySelectorAll(".delivery-method")
@@ -11,8 +9,10 @@ const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelec
 const sortPopUpBox = document.querySelector(".sort")
 const freeDeliveryRadio = document.querySelector('.free-delivery')
 const stars = document.querySelectorAll('.star-wrapper')
+const renderedRestaurants = document.querySelector('.displayed-restaurants')
+const restaurantCardTemplate = document.querySelector('.card-template')
 
-let currentRating = 0;
+let currentRating = null;
 let isOpenNow = true;
 let isFreeDelivery = false
 
@@ -89,6 +89,8 @@ const foods = [
     },
     
   ]
+
+let matchingRestaurants = []
 
 function slide(index){
   deliveryMethod.forEach( item => item.classList.remove("active"))
@@ -170,3 +172,19 @@ document.querySelector('.scroll.left').addEventListener('click', () => {
 toggleSortPopUp.forEach(element => element.addEventListener('click', () => {
   sortPopUpBox.classList.toggle('hide')
 }))
+
+matchingRestaurants = restaurants.filter((restaurant) => restaurant.isOpenNow == isOpenNow)
+document.querySelector('.number-opened').textContent = `Order from ${matchingRestaurants.length} restaurants`
+
+matchingRestaurants.forEach((restaurant) => {
+  const clone = restaurantCardTemplate.content.cloneNode(true);
+  clone.querySelector('.card-image').src = restaurant.image;
+  clone.querySelector('.restaurant-name').textContent = restaurant.name;
+  clone.querySelector('.cuisines').textContent = restaurant.cuisines.join(', ')
+  clone.querySelector('.rating').textContent = restaurant.rating;
+  clone.querySelector('.reviewers').textContent = `(${restaurant.numReviews}+)`;
+  clone.querySelector('.delivery-charge').textContent = restaurant.deliveryFee;
+  clone.querySelector('.time').textContent = `${restaurant.minDeliveryTime}-${restaurant.maxDeliveryTime} min`
+  renderedRestaurants.appendChild(clone)
+})
+console.log(renderedRestaurants);

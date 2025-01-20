@@ -6,8 +6,9 @@ export const restaurants = [
       maxDeliveryTime: 40,
       deliveryFee: "Free",
       rating: 4.5,
-      reviewers: 120,
-      image: "assets/images/baked-salmon-futomaki.jpg"
+      numReviews: 120,
+      image: "assets/images/baked-salmon-futomaki.jpg",
+      isOpenNow: true,
     },
     {
       name: "Spice Symphony",
@@ -16,8 +17,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 3.99,
       rating: 4.2,
-      reviewers: 85,
-      image: "assets/images/sushi-hero.jpg"
+      numReviews: 85,
+      image: "assets/images/sushi-hero.jpg",
+      isOpenNow: true,
     },
     {
       name: "Sushi Delight",
@@ -26,8 +28,9 @@ export const restaurants = [
       maxDeliveryTime: 45,
       deliveryFee: 4.99,
       rating: 4.8,
-      reviewers: 200,
-      image: "assets/images/yamato-sushi.jpg"
+      numReviews: 200,
+      image: "assets/images/yamato-sushi.jpg",
+      isOpenNow: true,
     },
     {
       name: "Burger Bros",
@@ -36,8 +39,9 @@ export const restaurants = [
       maxDeliveryTime: 30,
       deliveryFee: "Free",
       rating: 4.0,
-      reviewers: 65,
-      image: "assets/images/sushi-hero.jpg"
+      numReviews: 65,
+      image: "assets/images/sushi-hero.jpg",
+      isOpenNow: true,
     },
     {
       name: "Taco Fiesta",
@@ -46,8 +50,9 @@ export const restaurants = [
       maxDeliveryTime: 35,
       deliveryFee: 2.99,
       rating: 4.3,
-      reviewers: 140,
-      image: "assets/images/sushi-dream.jpg"
+      numReviews: 140,
+      image: "assets/images/sushi-dream.jpg",
+      isOpenNow: true,
     },
     {
       name: "Dragon Wok",
@@ -56,8 +61,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 3.49,
       rating: 4.6,
-      reviewers: 180,
-      image: "assets/images/baked-salmon-futomaki.jpg"
+      numReviews: 180,
+      image: "assets/images/baked-salmon-futomaki.jpg",
+      isOpenNow: true,
     },
     {
       name: "Urban Eats",
@@ -66,8 +72,9 @@ export const restaurants = [
       maxDeliveryTime: 40,
       deliveryFee: 3.99,
       rating: 4.4,
-      reviewers: 95,
-      image: "assets/images/sushi-dream.jpg"
+      numReviews: 95,
+      image: "assets/images/sushi-dream.jpg",
+      isOpenNow: true,
     },
     {
       name: "The Green Bowl",
@@ -76,8 +83,9 @@ export const restaurants = [
       maxDeliveryTime: 25,
       deliveryFee: "Free",
       rating: 4.7,
-      reviewers: 150,
-      image: "assets/images/baked-salmon-futomaki.jpg"
+      numReviews: 150,
+      image: "assets/images/baked-salmon-futomaki.jpg",
+      isOpenNow: true,
     },
     {
       name: "Pasta Palace",
@@ -86,8 +94,9 @@ export const restaurants = [
       maxDeliveryTime: 40,
       deliveryFee: 2.49,
       rating: 4.2,
-      reviewers: 70,
-      image: "assets/images/bento-1.jpg"
+      numReviews: 70,
+      image: "assets/images/bento-1.jpg",
+      isOpenNow: true,
     },
     {
       name: "BBQ Haven",
@@ -96,8 +105,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 4.99,
       rating: 4.3,
-      reviewers: 110,
-      image: "assets/images/bento-1.jpg"
+      numReviews: 110,
+      image: "assets/images/bento-1.jpg",
+      isOpenNow: true,
     },
     {
       name: "Pho Real",
@@ -106,8 +116,9 @@ export const restaurants = [
       maxDeliveryTime: 40,
       deliveryFee: "Free",
       rating: 4.5,
-      reviewers: 130,
-      image: "assets/images/sushi-craft.jpg"
+      numReviews: 130,
+      image: "assets/images/sushi-craft.jpg",
+      isOpenNow: true,
     },
     {
       name: "Curry House",
@@ -116,8 +127,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 3.49,
       rating: 4.1,
-      reviewers: 90,
-      image: "assets/images/baked-salmon-futomaki.jpg"
+      numReviews: 90,
+      image: "assets/images/baked-salmon-futomaki.jpg",
+      isOpenNow: false,
     },
     {
       name: "Ramen Runners",
@@ -126,8 +138,9 @@ export const restaurants = [
       maxDeliveryTime: 35,
       deliveryFee: 2.99,
       rating: 4.7,
-      reviewers: 160,
-      image: "assets/images/baked-salmon-futomaki.jpg"
+      numReviews: 160,
+      image: "assets/images/baked-salmon-futomaki.jpg",
+      isOpenNow: true,
     },
     {
       name: "Mediterranean Bliss",
@@ -136,8 +149,9 @@ export const restaurants = [
       maxDeliveryTime: 45,
       deliveryFee: 3.99,
       rating: 4.4,
-      reviewers: 105,
-      image: "assets/images/sushi-craft.jpg"
+      numReviews: 105,
+      image: "assets/images/sushi-craft.jpg",
+      isOpenNow: true,
     },
     {
       name: "The Breakfast Spot",
@@ -146,8 +160,9 @@ export const restaurants = [
       maxDeliveryTime: 25,
       deliveryFee: "Free",
       rating: 4.8,
-      reviewers: 190,
-      image: "assets/images/salmon-futomaki.jpg"
+      numReviews: 190,
+      image: "assets/images/salmon-futomaki.jpg",
+      isOpenNow: false,
     },
     {
       name: "Dim Sum Garden",
@@ -156,8 +171,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 4.49,
       rating: 4.6,
-      reviewers: 175,
-      image: "assets/images/futomaki-ebi-tempura.jpg"
+      numReviews: 175,
+      image: "assets/images/futomaki-ebi-tempura.jpg",
+      isOpenNow: true,
     },
     {
       name: "Pizza Paradise",
@@ -166,8 +182,9 @@ export const restaurants = [
       maxDeliveryTime: 40,
       deliveryFee: "Free",
       rating: 4.3,
-      reviewers: 120,
-      image: "assets/images/futomaki-ebi-tempura.jpg"
+      numReviews: 120,
+      image: "assets/images/futomaki-ebi-tempura.jpg",
+      isOpenNow: true,
     },
     {
       name: "Tandoori Flames",
@@ -176,8 +193,9 @@ export const restaurants = [
       maxDeliveryTime: 50,
       deliveryFee: 3.99,
       rating: 4.2,
-      reviewers: 80,
-      image: "assets/images/dragon-uramaki.jpg"
+      numReviews: 80,
+      image: "assets/images/dragon-uramaki.jpg",
+      isOpenNow: false,
     },
     {
       name: "Burger Blitz",
@@ -186,8 +204,9 @@ export const restaurants = [
       maxDeliveryTime: 30,
       deliveryFee: "Free",
       rating: 4.0,
-      reviewers: 60,
-      image: "assets/images/bento-2.jpg"
+      numReviews: 60,
+      image: "assets/images/bento-2.jpg",
+      isOpenNow: true,
     },
     {
       name: "Sushi Sensation",
@@ -196,8 +215,9 @@ export const restaurants = [
       maxDeliveryTime: 45,
       deliveryFee: 4.99,
       rating: 4.9,
-      reviewers: 210,
-      image: "assets/images/bento-2.jpg"
+      numReviews: 210,
+      image: "assets/images/bento-2.jpg",
+      isOpenNow: true,
     },
     {
         name: "Jade Dragon House",
@@ -207,7 +227,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.7,
         numReviews: 1283,
-        image: "assets/images/futomaki-sake-roll.jpg"
+        image: "assets/images/futomaki-sake-roll.jpg",
+        isOpenNow: false,
       },
       {
         name: "Bella Pasta",
@@ -217,7 +238,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.5,
         numReviews: 892,
-        image: "assets/images/salmon-futomaki.jpg"
+        image: "assets/images/salmon-futomaki.jpg",
+        isOpenNow: false,
       },
       {
         name: "Sushi Master",
@@ -227,7 +249,8 @@ export const restaurants = [
         deliveryFee: 5.99,
         rating: 4.8,
         numReviews: 2156,
-        image: "assets/images/dragon-uramaki.jpg"
+        image: "assets/images/dragon-uramaki.jpg",
+        isOpenNow: true,
       },
       {
         name: "Taco Fiesta",
@@ -237,7 +260,8 @@ export const restaurants = [
         deliveryFee: 2.99,
         rating: 4.3,
         numReviews: 567,
-        image: "assets/images/yamato-sushi.jpg"
+        image: "assets/images/yamato-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "Mumbai Spice",
@@ -247,7 +271,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.6,
         numReviews: 945,
-        image: "assets/images/rainbow-set.jpg"
+        image: "assets/images/rainbow-set.jpg",
+        isOpenNow: true,
       },
       {
         name: "Burger Bros",
@@ -257,7 +282,8 @@ export const restaurants = [
         deliveryFee: 0,
         rating: 4.4,
         numReviews: 1567,
-        image: "assets/images/futomaki-sake-roll.jpg"
+        image: "assets/images/futomaki-sake-roll.jpg",
+        isOpenNow: false,
       },
       {
         name: "Thai Orchid",
@@ -267,7 +293,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.5,
         numReviews: 782,
-        image: "assets/images/yamato-sushi.jpg"
+        image: "assets/images/yamato-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "Mediterranean Delight",
@@ -277,7 +304,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.7,
         numReviews: 623,
-        image: "assets/images/rainbow-set.jpg"
+        image: "assets/images/rainbow-set.jpg",
+        isOpenNow: false,
       },
       {
         name: "Seoul Kitchen",
@@ -287,7 +315,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.8,
         numReviews: 892,
-        image: "assets/images/hosmomak-1.jpg"
+        image: "assets/images/hosmomak-1.jpg",
+        isOpenNow: false,
       },
       {
         name: "Pho Express",
@@ -297,7 +326,8 @@ export const restaurants = [
         deliveryFee: 2.99,
         rating: 4.4,
         numReviews: 456,
-        image: "assets/images/rainbow-set.jpg"
+        image: "assets/images/rainbow-set.jpg",
+        isOpenNow: true,
       },
       {
         name: "Wings & Things",
@@ -307,7 +337,8 @@ export const restaurants = [
         deliveryFee: 0,
         rating: 4.2,
         numReviews: 789,
-        image: "assets/images/hosmomak-1.jpg"
+        image: "assets/images/hosmomak-1.jpg",
+        isOpenNow: true,
       },
       {
         name: "Fresh Wok",
@@ -317,7 +348,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.3,
         numReviews: 567,
-        image: "assets/images/dragon-uramaki.jpg"
+        image: "assets/images/dragon-uramaki.jpg",
+        isOpenNow: false,
       },
       {
         name: "Pizza Paradise",
@@ -327,7 +359,8 @@ export const restaurants = [
         deliveryFee: 0,
         rating: 4.6,
         numReviews: 1432,
-        image: "assets/images/point-sushi.jpg"
+        image: "assets/images/point-sushi.jpg",
+        isOpenNow: false,
       },
       {
         name: "Veggie Valley",
@@ -337,7 +370,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.7,
         numReviews: 345,
-        image: "assets/images/dragon-uramaki.jpg"
+        image: "assets/images/dragon-uramaki.jpg",
+        isOpenNow: true,
       },
       {
         name: "Steakhouse Elite",
@@ -347,7 +381,8 @@ export const restaurants = [
         deliveryFee: 6.99,
         rating: 4.8,
         numReviews: 892,
-        image: "assets/images/dragon-uramaki.jpg"
+        image: "assets/images/dragon-uramaki.jpg",
+        isOpenNow: false,
       },
       {
         name: "Falafel House",
@@ -357,7 +392,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.5,
         numReviews: 567,
-        image: "assets/images/hosmomak-2.jpg"
+        image: "assets/images/hosmomak-2.jpg",
+        isOpenNow: true,
       },
       {
         name: "Caribbean Flavors",
@@ -367,7 +403,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.6,
         numReviews: 234,
-        image: "assets/images/rainbow-set.jpg"
+        image: "assets/images/rainbow-set.jpg",
+        isOpenNow: true,
       },
       {
         name: "Ramen House",
@@ -377,7 +414,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.7,
         numReviews: 678,
-        image: "assets/images/koneko-sushi.jpg"
+        image: "assets/images/koneko-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "BBQ King",
@@ -387,7 +425,8 @@ export const restaurants = [
         deliveryFee: 5.99,
         rating: 4.8,
         numReviews: 1234,
-        image: "assets/images/hosmomak-2.jpg"
+        image: "assets/images/hosmomak-2.jpg",
+        isOpenNow: false,
       },
       {
         name: "Sandwich Studio",
@@ -397,7 +436,8 @@ export const restaurants = [
         deliveryFee: 2.99,
         rating: 4.4,
         numReviews: 456,
-        image: "assets/images/point-sushi.jpg"
+        image: "assets/images/point-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "Spanish Tapas",
@@ -407,7 +447,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.6,
         numReviews: 345,
-        image: "assets/images/koneko-sushi.jpg"
+        image: "assets/images/koneko-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "Healthy Bowl",
@@ -417,7 +458,8 @@ export const restaurants = [
         deliveryFee: 3.99,
         rating: 4.5,
         numReviews: 789,
-        image: "assets/images/katsu-sushi.jpg"
+        image: "assets/images/katsu-sushi.jpg",
+        isOpenNow: true,
       },
       {
         name: "French Bistro",
@@ -427,7 +469,8 @@ export const restaurants = [
         deliveryFee: 5.99,
         rating: 4.7,
         numReviews: 567,
-        image: "assets/images/bento-3.jpg"
+        image: "assets/images/bento-3.jpg",
+        isOpenNow: false,
       },
       {
         name: "Seafood Shack",
@@ -437,7 +480,8 @@ export const restaurants = [
         deliveryFee: 4.99,
         rating: 4.6,
         numReviews: 890,
-        image: "assets/images/katsu-sushi.jpg"
+        image: "assets/images/katsu-sushi.jpg",
+        isOpenNow: false,
       },
       {
         name: "Street Tacos",
@@ -447,6 +491,7 @@ export const restaurants = [
         deliveryFee: 0,
         rating: 4.4,
         numReviews: 678,
-        image: "assets/images/bento-3.jpg"
+        image: "assets/images/bento-3.jpg",
+        isOpenNow: true,
       }
   ];  
