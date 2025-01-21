@@ -253,7 +253,7 @@ a {
   background-color: var(--primary-color1);
   min-height: calc(99dvh - 24px - 12rem);
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem;
   border-radius: 2rem;
 }
@@ -294,6 +294,11 @@ a {
   outline: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   padding: 4px 12px 4px 24px;
+  background-color: #e4e4e4;
+}
+
+.search::placeholder {
+  color: #000;
 }
 
 .search-icon {
@@ -306,6 +311,7 @@ a {
   align-items: center;
   justify-content: space-around;
   border-radius: 12px;
+  background-color: #e4e4e4;
 }
 
 .sort {
@@ -318,7 +324,7 @@ a {
   padding: 1rem;
   position: absolute;
   top: 2rem;
-  right: 1rem;
+  right: 0.5rem;
 }
 
 .hide {
@@ -346,22 +352,41 @@ a {
 }
 
 .restaurants-container {
-  margin-top: 2vh;
+  margin-top: 3vh;
+}
+
+.number-opened {
+  font-size: 1.3rem;
+}
+
+.displayed-restaurants{
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  margin-top: 3vh;
 }
 
 .restaurant-card {
-  background-color: cornflowerblue;
+  background-color: var(--primary-color1);
+  box-shadow: 1px 2px 5px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   gap: 8px;
+  border-radius: 12px;
+}
+
+.restaurant-name {
+  font-size: 1.2rem;
 }
 
 .card-image {
   width: 150px;
-  height: auto;
+  aspect-ratio: 16 / 11;
+  border-radius: 12px 0 0 12px;
 }
 
 .cuisines {
   color: #4b5563;
+  font-size: 0.85rem;
 }
 
 .restaurant-info {
@@ -374,5 +399,10 @@ a {
   display: flex;
   align-items: center;
   gap: 4px;
+  font-size: 0.85rem;
 }
 
+.center-dot {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.3);
+}
