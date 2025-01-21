@@ -12,6 +12,7 @@ const stars = document.querySelectorAll('.star-wrapper')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
 
+let methodOfDelivery = 'delivery-btn';
 let currentRating = null;
 let isOpenNow = true;
 let isFreeDelivery = false
@@ -98,9 +99,15 @@ function slide(index){
   if (index == 0) {
     slider.classList.remove('slide-right')
     freeDeliveryRadio.removeAttribute('disabled')
+    methodOfDelivery = 'delivery-btn'
+    document.querySelectorAll('.deliver-info-container').forEach(item => item.classList.remove('hide'))
+    document.querySelectorAll('.restaurant-address').forEach(item => item.classList.add('hide'))
   } else {
     slider.classList.add('slide-right')
     freeDeliveryRadio.setAttribute('disabled', true)
+    methodOfDelivery = 'pickup-btn'
+    document.querySelectorAll('.deliver-info-container').forEach(item => item.classList.add('hide'))
+    document.querySelectorAll('.restaurant-address').forEach(item => item.classList.remove('hide'))
   }
 }
 
@@ -185,6 +192,7 @@ matchingRestaurants.forEach((restaurant) => {
   clone.querySelector('.reviewers').textContent = `(${restaurant.numReviews}+)`;
   clone.querySelector('.delivery-charge').textContent = restaurant.deliveryFee;
   clone.querySelector('.time').textContent = `${restaurant.minDeliveryTime}-${restaurant.maxDeliveryTime} min`
+  clone.querySelector('.restaurant-address').textContent = restaurant.address
   renderedRestaurants.appendChild(clone)
 })
 console.log(renderedRestaurants);

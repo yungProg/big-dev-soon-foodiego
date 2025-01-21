@@ -327,10 +327,6 @@ a {
   right: 0.5rem;
 }
 
-.hide {
-  display: none;
-}
-
 .sort-options > div:not(:first-of-type) {
   margin: 6px 0;
 }
@@ -405,4 +401,7 @@ a {
 .center-dot {
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.3);
+}
+.hide {
+  display: none;
 }

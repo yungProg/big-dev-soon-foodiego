@@ -53,6 +53,7 @@ export const restaurants = [
       numReviews: 140,
       image: "assets/images/sushi-dream.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Dragon Wok",
@@ -64,6 +65,7 @@ export const restaurants = [
       numReviews: 180,
       image: "assets/images/baked-salmon-futomaki.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Urban Eats",
@@ -75,6 +77,7 @@ export const restaurants = [
       numReviews: 95,
       image: "assets/images/sushi-dream.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "The Green Bowl",
@@ -86,6 +89,7 @@ export const restaurants = [
       numReviews: 150,
       image: "assets/images/baked-salmon-futomaki.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Pasta Palace",
@@ -97,6 +101,7 @@ export const restaurants = [
       numReviews: 70,
       image: "assets/images/bento-1.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "BBQ Haven",
@@ -108,6 +113,7 @@ export const restaurants = [
       numReviews: 110,
       image: "assets/images/bento-1.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Pho Real",
@@ -119,6 +125,7 @@ export const restaurants = [
       numReviews: 130,
       image: "assets/images/sushi-craft.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Curry House",
@@ -130,6 +137,7 @@ export const restaurants = [
       numReviews: 90,
       image: "assets/images/baked-salmon-futomaki.jpg",
       isOpenNow: false,
+      address: 'Street 24',
     },
     {
       name: "Ramen Runners",
@@ -141,6 +149,7 @@ export const restaurants = [
       numReviews: 160,
       image: "assets/images/baked-salmon-futomaki.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Mediterranean Bliss",
@@ -152,6 +161,7 @@ export const restaurants = [
       numReviews: 105,
       image: "assets/images/sushi-craft.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "The Breakfast Spot",
@@ -163,6 +173,7 @@ export const restaurants = [
       numReviews: 190,
       image: "assets/images/salmon-futomaki.jpg",
       isOpenNow: false,
+      address: 'Street 24',
     },
     {
       name: "Dim Sum Garden",
@@ -174,6 +185,7 @@ export const restaurants = [
       numReviews: 175,
       image: "assets/images/futomaki-ebi-tempura.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Pizza Paradise",
@@ -185,6 +197,7 @@ export const restaurants = [
       numReviews: 120,
       image: "assets/images/futomaki-ebi-tempura.jpg",
       isOpenNow: true,
+      address: 'Street 24',
     },
     {
       name: "Tandoori Flames",
@@ -196,6 +209,7 @@ export const restaurants = [
       numReviews: 80,
       image: "assets/images/dragon-uramaki.jpg",
       isOpenNow: false,
+      address: 'Street 24',
     },
     {
       name: "Burger Blitz",
@@ -207,6 +221,7 @@ export const restaurants = [
       numReviews: 60,
       image: "assets/images/bento-2.jpg",
       isOpenNow: true,
+      address: 'Street 11',
     },
     {
       name: "Sushi Sensation",
@@ -218,6 +233,7 @@ export const restaurants = [
       numReviews: 210,
       image: "assets/images/bento-2.jpg",
       isOpenNow: true,
+      address: 'Street 11',
     },
     {
         name: "Jade Dragon House",
@@ -229,6 +245,7 @@ export const restaurants = [
         numReviews: 1283,
         image: "assets/images/futomaki-sake-roll.jpg",
         isOpenNow: false,
+        address: 'Street 11',
       },
       {
         name: "Bella Pasta",
@@ -240,6 +257,7 @@ export const restaurants = [
         numReviews: 892,
         image: "assets/images/salmon-futomaki.jpg",
         isOpenNow: false,
+        address: 'Street 11',
       },
       {
         name: "Sushi Master",
@@ -251,6 +269,7 @@ export const restaurants = [
         numReviews: 2156,
         image: "assets/images/dragon-uramaki.jpg",
         isOpenNow: true,
+        address: 'Street 11',
       },
       {
         name: "Taco Fiesta",
@@ -262,6 +281,7 @@ export const restaurants = [
         numReviews: 567,
         image: "assets/images/yamato-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 11',
       },
       {
         name: "Mumbai Spice",
@@ -273,6 +293,7 @@ export const restaurants = [
         numReviews: 945,
         image: "assets/images/rainbow-set.jpg",
         isOpenNow: true,
+        address: 'Street 11',
       },
       {
         name: "Burger Bros",
@@ -284,6 +305,7 @@ export const restaurants = [
         numReviews: 1567,
         image: "assets/images/futomaki-sake-roll.jpg",
         isOpenNow: false,
+        address: 'Street 11',
       },
       {
         name: "Thai Orchid",
@@ -295,6 +317,7 @@ export const restaurants = [
         numReviews: 782,
         image: "assets/images/yamato-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 11',
       },
       {
         name: "Mediterranean Delight",
@@ -306,6 +329,7 @@ export const restaurants = [
         numReviews: 623,
         image: "assets/images/rainbow-set.jpg",
         isOpenNow: false,
+        address: 'Street 11',
       },
       {
         name: "Seoul Kitchen",
@@ -317,6 +341,7 @@ export const restaurants = [
         numReviews: 892,
         image: "assets/images/hosmomak-1.jpg",
         isOpenNow: false,
+        address: 'Street 11',
       },
       {
         name: "Pho Express",
@@ -328,6 +353,7 @@ export const restaurants = [
         numReviews: 456,
         image: "assets/images/rainbow-set.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Wings & Things",
@@ -339,6 +365,7 @@ export const restaurants = [
         numReviews: 789,
         image: "assets/images/hosmomak-1.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Fresh Wok",
@@ -350,6 +377,7 @@ export const restaurants = [
         numReviews: 567,
         image: "assets/images/dragon-uramaki.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Pizza Paradise",
@@ -361,6 +389,7 @@ export const restaurants = [
         numReviews: 1432,
         image: "assets/images/point-sushi.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Veggie Valley",
@@ -372,6 +401,7 @@ export const restaurants = [
         numReviews: 345,
         image: "assets/images/dragon-uramaki.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Steakhouse Elite",
@@ -383,6 +413,7 @@ export const restaurants = [
         numReviews: 892,
         image: "assets/images/dragon-uramaki.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Falafel House",
@@ -394,6 +425,7 @@ export const restaurants = [
         numReviews: 567,
         image: "assets/images/hosmomak-2.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Caribbean Flavors",
@@ -405,6 +437,7 @@ export const restaurants = [
         numReviews: 234,
         image: "assets/images/rainbow-set.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Ramen House",
@@ -416,6 +449,7 @@ export const restaurants = [
         numReviews: 678,
         image: "assets/images/koneko-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "BBQ King",
@@ -427,6 +461,7 @@ export const restaurants = [
         numReviews: 1234,
         image: "assets/images/hosmomak-2.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Sandwich Studio",
@@ -438,6 +473,7 @@ export const restaurants = [
         numReviews: 456,
         image: "assets/images/point-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Spanish Tapas",
@@ -449,6 +485,7 @@ export const restaurants = [
         numReviews: 345,
         image: "assets/images/koneko-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "Healthy Bowl",
@@ -460,6 +497,7 @@ export const restaurants = [
         numReviews: 789,
         image: "assets/images/katsu-sushi.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       },
       {
         name: "French Bistro",
@@ -471,6 +509,7 @@ export const restaurants = [
         numReviews: 567,
         image: "assets/images/bento-3.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Seafood Shack",
@@ -482,6 +521,7 @@ export const restaurants = [
         numReviews: 890,
         image: "assets/images/katsu-sushi.jpg",
         isOpenNow: false,
+        address: 'Street 89',
       },
       {
         name: "Street Tacos",
@@ -493,5 +533,6 @@ export const restaurants = [
         numReviews: 678,
         image: "assets/images/bento-3.jpg",
         isOpenNow: true,
+        address: 'Street 89',
       }
   ];  
