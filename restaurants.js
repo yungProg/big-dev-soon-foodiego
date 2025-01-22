@@ -9,6 +9,7 @@ export const restaurants = [
       numReviews: 120,
       image: "assets/images/baked-salmon-futomaki.jpg",
       isOpenNow: true,
+      address: 'Street 7',
     },
     {
       name: "Spice Symphony",
@@ -20,6 +21,7 @@ export const restaurants = [
       numReviews: 85,
       image: "assets/images/sushi-hero.jpg",
       isOpenNow: true,
+      address: 'Street 9',
     },
     {
       name: "Sushi Delight",
@@ -31,6 +33,7 @@ export const restaurants = [
       numReviews: 200,
       image: "assets/images/yamato-sushi.jpg",
       isOpenNow: true,
+      address: 'Street 33',
     },
     {
       name: "Burger Bros",
@@ -42,6 +45,7 @@ export const restaurants = [
       numReviews: 65,
       image: "assets/images/sushi-hero.jpg",
       isOpenNow: true,
+      address: 'Street 2',
     },
     {
       name: "Taco Fiesta",

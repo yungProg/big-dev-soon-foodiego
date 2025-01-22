@@ -16,6 +16,7 @@ let methodOfDelivery = 'delivery-btn';
 let currentRating = null;
 let isOpenNow = true;
 let isFreeDelivery = false
+let cuisine
 
 const foods = [
     {
@@ -147,9 +148,10 @@ function makeFoodList() {
   foods.forEach((foodType, index) => {
     const foodElement = document.createElement('button');
     foodElement.classList.add('food-type');
+    foodElement.setAttribute('data-value', `${foodType.type}`)
     foodElement.innerHTML = `
-      <img src=${foodType.img} alt=${foodType.type} />
-      <span>${foodType.type}</span>
+      <img data-value=${foodType.type} src=${foodType.img} alt=${foodType.type} />
+      <span data-value=${foodType.type}>${foodType.type}</span>
     `
     foodElement.addEventListener("click", () => selectCategory(index))
     foodFiltersContainer.appendChild(foodElement)
@@ -163,6 +165,12 @@ function selectCategory(index) {
   })
   foodTypes[index].classList.add('active')
 }
+
+foodFiltersContainer.addEventListener('click', (e) => {
+  cuisine = e.target.getAttribute('data-value') || cuisine
+  matchingRestaurants = restaurants.filter(item => item.cuisines.includes(cuisine))
+  displayRestaurants()
+})
 
 makeFoodList()
 
@@ -181,18 +189,20 @@ toggleSortPopUp.forEach(element => element.addEventListener('click', () => {
 }))
 
 matchingRestaurants = restaurants.filter((restaurant) => restaurant.isOpenNow == isOpenNow)
-document.querySelector('.number-opened').textContent = `Order from ${matchingRestaurants.length} restaurants`
 
-matchingRestaurants.forEach((restaurant) => {
-  const clone = restaurantCardTemplate.content.cloneNode(true);
-  clone.querySelector('.card-image').src = restaurant.image;
-  clone.querySelector('.restaurant-name').textContent = restaurant.name;
-  clone.querySelector('.cuisines').textContent = restaurant.cuisines.join(', ')
-  clone.querySelector('.rating').textContent = restaurant.rating;
-  clone.querySelector('.reviewers').textContent = `(${restaurant.numReviews}+)`;
-  clone.querySelector('.delivery-charge').textContent = restaurant.deliveryFee;
-  clone.querySelector('.time').textContent = `${restaurant.minDeliveryTime}-${restaurant.maxDeliveryTime} min`
-  clone.querySelector('.restaurant-address').textContent = restaurant.address
-  renderedRestaurants.appendChild(clone)
-})
-console.log(renderedRestaurants);
+function displayRestaurants() {
+  document.querySelector('.number-opened').textContent = `Order from ${matchingRestaurants.length} restaurants`
+  renderedRestaurants.innerHTML = ''
+  matchingRestaurants.forEach((restaurant) => {
+    const clone = restaurantCardTemplate.content.cloneNode(true);
+    clone.querySelector('.card-image').src = restaurant.image;
+    clone.querySelector('.restaurant-name').textContent = restaurant.name;
+    clone.querySelector('.cuisines').textContent = restaurant.cuisines.join(', ')
+    clone.querySelector('.rating').textContent = restaurant.rating;
+    clone.querySelector('.reviewers').textContent = `(${restaurant.numReviews}+)`;
+    clone.querySelector('.delivery-charge').textContent = restaurant.deliveryFee;
+    clone.querySelector('.time').textContent = `${restaurant.minDeliveryTime}-${restaurant.maxDeliveryTime} min`
+    clone.querySelector('.restaurant-address').textContent = restaurant.address
+    renderedRestaurants.appendChild(clone)
+  })
+}
