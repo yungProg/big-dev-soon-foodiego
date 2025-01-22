@@ -15,7 +15,7 @@ const restaurantCardTemplate = document.querySelector('.card-template')
 let methodOfDelivery = 'delivery-btn';
 let currentRating = null;
 let isOpenNow = true;
-let isFreeDelivery = false
+let deliveryFee
 let cuisine
 
 const foods = [
@@ -135,6 +135,8 @@ stars.forEach((star) => {
   })
   star.addEventListener('click', () => {
     currentRating = star.getAttribute('data-value')
+    filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
+    displayRestaurants()
   })
   star.addEventListener('mouseout', () => highlightStars(currentRating))
 })
@@ -168,7 +170,8 @@ function selectCategory(index) {
 
 foodFiltersContainer.addEventListener('click', (e) => {
   cuisine = e.target.getAttribute('data-value') || cuisine
-  matchingRestaurants = restaurants.filter(item => item.cuisines.includes(cuisine))
+  //matchingRestaurants = restaurants.filter(item => item.cuisines.includes(cuisine))
+  filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
   displayRestaurants()
 })
 
@@ -205,4 +208,16 @@ function displayRestaurants() {
     clone.querySelector('.restaurant-address').textContent = restaurant.address
     renderedRestaurants.appendChild(clone)
   })
+}
+
+displayRestaurants()
+
+function filterRestaurants(cuisineSelected, availability, fee, numStars) {
+  matchingRestaurants = restaurants.filter((restaurant) => {
+    restaurant.cuisines.includes(cuisineSelected) && 
+    restaurant.isOpenNow == availability && 
+    typeof restaurant.deliveryFee == typeof fee &&
+    numStars - restaurant.rating <= 1
+  })
+  displayRestaurants()
 }
