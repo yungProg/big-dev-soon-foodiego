@@ -15,7 +15,7 @@ const restaurantCardTemplate = document.querySelector('.card-template')
 let methodOfDelivery = 'delivery-btn';
 let currentRating = null;
 let isOpenNow = true;
-let deliveryFee
+let deliveryFee = 2
 let cuisine
 
 const foods = [
@@ -41,7 +41,7 @@ const foods = [
     },
     {
       id: 5,
-      type: 'Fast food',
+      type: 'Fast Food',
       img: '/assets/food-icons/fast-food-icon.svg',
     },
     {
@@ -51,7 +51,7 @@ const foods = [
     },
     {
       id: 7,
-      type: 'Ice cream',
+      type: 'Ice Cream',
       img: '/assets/food-icons/ice-cream-icon.svg',
     },
     {
@@ -150,10 +150,10 @@ function makeFoodList() {
   foods.forEach((foodType, index) => {
     const foodElement = document.createElement('button');
     foodElement.classList.add('food-type');
-    foodElement.setAttribute('data-value', `${foodType.type}`)
+    foodElement.setAttribute('data-value', `${foodType.type.replace(/\s/g,'-')}`)
     foodElement.innerHTML = `
-      <img data-value=${foodType.type} src=${foodType.img} alt=${foodType.type} />
-      <span data-value=${foodType.type}>${foodType.type}</span>
+      <img data-value=${foodType.type.replace(/\s/g,'-')} src=${foodType.img} alt=${foodType.type} />
+      <span data-value=${foodType.type.replace(/\s/g,'-')}>${foodType.type}</span>
     `
     foodElement.addEventListener("click", () => selectCategory(index))
     foodFiltersContainer.appendChild(foodElement)
@@ -169,7 +169,7 @@ function selectCategory(index) {
 }
 
 foodFiltersContainer.addEventListener('click', (e) => {
-  cuisine = e.target.getAttribute('data-value') || cuisine
+  cuisine = e.target.getAttribute('data-value').replace(/-/g,' ') || cuisine  
   //matchingRestaurants = restaurants.filter(item => item.cuisines.includes(cuisine))
   filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
   displayRestaurants()
@@ -213,11 +213,27 @@ function displayRestaurants() {
 displayRestaurants()
 
 function filterRestaurants(cuisineSelected, availability, fee, numStars) {
-  matchingRestaurants = restaurants.filter((restaurant) => {
-    restaurant.cuisines.includes(cuisineSelected) && 
-    restaurant.isOpenNow == availability && 
-    typeof restaurant.deliveryFee == typeof fee &&
-    numStars - restaurant.rating <= 1
-  })
+  console.log(cuisineSelected, availability, typeof fee, !numStars);
+
+  if (!numStars) {
+    matchingRestaurants = restaurants.filter((restaurant) => {
+      console.log(restaurant.cuisines, restaurant.cuisines.includes(cuisineSelected));
+      
+      return (restaurant.cuisines.includes(cuisineSelected) && 
+      restaurant.isOpenNow == availability && 
+      typeof restaurant.deliveryFee == typeof fee)
+    })
+  } else {
+    matchingRestaurants = restaurants.filter((restaurant) => {
+      return (restaurant.cuisines.includes(cuisineSelected) && 
+      restaurant.isOpenNow == availability && 
+      typeof restaurant.deliveryFee == typeof fee &&
+      restaurant.rating - numStars <= 1 &&
+      restaurant.rating - numStars >= 0
+     )
+    })
+  }
+  console.log(matchingRestaurants);
+    
   displayRestaurants()
 }
