@@ -1,7 +1,7 @@
 export const restaurants = [
     {
       name: "The Hungry Fork",
-      cuisines: ["Italian", "Pizza"],
+      cuisines: ["Italian", "Ice Cream"],
       minDeliveryTime: 20,
       maxDeliveryTime: 40,
       deliveryFee: "Free",
@@ -13,7 +13,7 @@ export const restaurants = [
     },
     {
       name: "Spice Symphony",
-      cuisines: ["Indian", "Vegetarian"],
+      cuisines: ["Indian", "Vegan"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 3.99,
@@ -25,7 +25,7 @@ export const restaurants = [
     },
     {
       name: "Sushi Delight",
-      cuisines: ["Japanese", "Sushi"],
+      cuisines: ["Sushi", "Sushi"],
       minDeliveryTime: 25,
       maxDeliveryTime: 45,
       deliveryFee: 4.99,
@@ -37,7 +37,7 @@ export const restaurants = [
     },
     {
       name: "Burger Bros",
-      cuisines: ["American", "Fast Food"],
+      cuisines: ["Breakfast", "Fast Food"],
       minDeliveryTime: 15,
       maxDeliveryTime: 30,
       deliveryFee: "Free",
@@ -49,7 +49,7 @@ export const restaurants = [
     },
     {
       name: "Taco Fiesta",
-      cuisines: ["Mexican", "Street Food"],
+      cuisines: ["Fast Food", "Burger"],
       minDeliveryTime: 20,
       maxDeliveryTime: 35,
       deliveryFee: 2.99,
@@ -61,7 +61,7 @@ export const restaurants = [
     },
     {
       name: "Dragon Wok",
-      cuisines: ["Chinese", "Asian"],
+      cuisines: ["Healthy", "Asian"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 3.49,
@@ -73,7 +73,7 @@ export const restaurants = [
     },
     {
       name: "Urban Eats",
-      cuisines: ["Fusion", "Healthy"],
+      cuisines: ["Sushi", "Healthy"],
       minDeliveryTime: 25,
       maxDeliveryTime: 40,
       deliveryFee: 3.99,
@@ -85,7 +85,7 @@ export const restaurants = [
     },
     {
       name: "The Green Bowl",
-      cuisines: ["Vegan", "Salads"],
+      cuisines: ["Vegan", "Pizza"],
       minDeliveryTime: 15,
       maxDeliveryTime: 25,
       deliveryFee: "Free",
@@ -97,7 +97,7 @@ export const restaurants = [
     },
     {
       name: "Pasta Palace",
-      cuisines: ["Italian", "Pasta"],
+      cuisines: ["Italian", "Pizza"],
       minDeliveryTime: 20,
       maxDeliveryTime: 40,
       deliveryFee: 2.49,
@@ -109,7 +109,7 @@ export const restaurants = [
     },
     {
       name: "BBQ Haven",
-      cuisines: ["American", "Barbecue"],
+      cuisines: ["Breakfast", "Seafood"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 4.99,
@@ -121,7 +121,7 @@ export const restaurants = [
     },
     {
       name: "Pho Real",
-      cuisines: ["Vietnamese", "Soups"],
+      cuisines: ["Asian", "Korean"],
       minDeliveryTime: 25,
       maxDeliveryTime: 40,
       deliveryFee: "Free",
@@ -133,7 +133,7 @@ export const restaurants = [
     },
     {
       name: "Curry House",
-      cuisines: ["Indian", "Spicy"],
+      cuisines: ["Indian", "Korean"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 3.49,
@@ -145,7 +145,7 @@ export const restaurants = [
     },
     {
       name: "Ramen Runners",
-      cuisines: ["Japanese", "Ramen"],
+      cuisines: ["Vegan", "Healthy"],
       minDeliveryTime: 20,
       maxDeliveryTime: 35,
       deliveryFee: 2.99,
@@ -157,7 +157,7 @@ export const restaurants = [
     },
     {
       name: "Mediterranean Bliss",
-      cuisines: ["Mediterranean", "Grill"],
+      cuisines: ["Breakfast", "Street Food"],
       minDeliveryTime: 25,
       maxDeliveryTime: 45,
       deliveryFee: 3.99,
@@ -169,7 +169,7 @@ export const restaurants = [
     },
     {
       name: "The Breakfast Spot",
-      cuisines: ["Breakfast", "Brunch"],
+      cuisines: ["Breakfast", "Ice Cream"],
       minDeliveryTime: 15,
       maxDeliveryTime: 25,
       deliveryFee: "Free",
@@ -181,7 +181,7 @@ export const restaurants = [
     },
     {
       name: "Dim Sum Garden",
-      cuisines: ["Chinese", "Dim Sum"],
+      cuisines: ["Asian", "Korean"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 4.49,
@@ -205,7 +205,7 @@ export const restaurants = [
     },
     {
       name: "Tandoori Flames",
-      cuisines: ["Indian", "Tandoori"],
+      cuisines: ["Indian", "Pizza"],
       minDeliveryTime: 30,
       maxDeliveryTime: 50,
       deliveryFee: 3.99,
@@ -217,7 +217,7 @@ export const restaurants = [
     },
     {
       name: "Burger Blitz",
-      cuisines: ["American", "Fast Food"],
+      cuisines: ["Burger", "Fast Food"],
       minDeliveryTime: 15,
       maxDeliveryTime: 30,
       deliveryFee: "Free",
@@ -229,7 +229,7 @@ export const restaurants = [
     },
     {
       name: "Sushi Sensation",
-      cuisines: ["Japanese", "Sushi"],
+      cuisines: ["Healthy", "Sushi"],
       minDeliveryTime: 25,
       maxDeliveryTime: 45,
       deliveryFee: 4.99,
@@ -241,7 +241,7 @@ export const restaurants = [
     },
     {
         name: "Jade Dragon House",
-        cuisines: ["Chinese", "Dim Sum"],
+        cuisines: ["Asian", "Sushi"],
         minDeliveryTime: 25,
         maxDeliveryTime: 45,
         deliveryFee: 4.99,
@@ -265,7 +265,7 @@ export const restaurants = [
       },
       {
         name: "Sushi Master",
-        cuisines: ["Japanese", "Sushi"],
+        cuisines: ["Breakfast", "Sushi"],
         minDeliveryTime: 35,
         maxDeliveryTime: 55,
         deliveryFee: 5.99,
@@ -277,7 +277,7 @@ export const restaurants = [
       },
       {
         name: "Taco Fiesta",
-        cuisines: ["Mexican"],
+        cuisines: ["Seafood", "Vegan"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 2.99,
@@ -289,7 +289,7 @@ export const restaurants = [
       },
       {
         name: "Mumbai Spice",
-        cuisines: ["Indian", "Vegetarian"],
+        cuisines: ["Indian", "Vegan"],
         minDeliveryTime: 30,
         maxDeliveryTime: 55,
         deliveryFee: 4.99,
@@ -301,7 +301,7 @@ export const restaurants = [
       },
       {
         name: "Burger Bros",
-        cuisines: ["American", "Burgers"],
+        cuisines: ["Fast Food", "Burgers"],
         minDeliveryTime: 15,
         maxDeliveryTime: 35,
         deliveryFee: 0,
@@ -313,7 +313,7 @@ export const restaurants = [
       },
       {
         name: "Thai Orchid",
-        cuisines: ["Thai", "Asian Fusion"],
+        cuisines: ["Sushi", "Asian"],
         minDeliveryTime: 25,
         maxDeliveryTime: 45,
         deliveryFee: 3.99,
@@ -325,7 +325,7 @@ export const restaurants = [
       },
       {
         name: "Mediterranean Delight",
-        cuisines: ["Mediterranean", "Greek"],
+        cuisines: ["Dessert", "Ice Cream"],
         minDeliveryTime: 30,
         maxDeliveryTime: 50,
         deliveryFee: 4.99,
@@ -337,7 +337,7 @@ export const restaurants = [
       },
       {
         name: "Seoul Kitchen",
-        cuisines: ["Korean", "BBQ"],
+        cuisines: ["Korean", "Asian"],
         minDeliveryTime: 35,
         maxDeliveryTime: 60,
         deliveryFee: 4.99,
@@ -349,7 +349,7 @@ export const restaurants = [
       },
       {
         name: "Pho Express",
-        cuisines: ["Vietnamese"],
+        cuisines: ["Dessert", "Ice Cream"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 2.99,
@@ -361,7 +361,7 @@ export const restaurants = [
       },
       {
         name: "Wings & Things",
-        cuisines: ["American", "Wings"],
+        cuisines: ["Burger", "Dessert"],
         minDeliveryTime: 25,
         maxDeliveryTime: 45,
         deliveryFee: 0,
@@ -373,7 +373,7 @@ export const restaurants = [
       },
       {
         name: "Fresh Wok",
-        cuisines: ["Chinese", "Asian"],
+        cuisines: ["Korean", "Asian"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 3.99,
@@ -397,7 +397,7 @@ export const restaurants = [
       },
       {
         name: "Veggie Valley",
-        cuisines: ["Vegetarian", "Vegan"],
+        cuisines: ["Healthy", "Vegan"],
         minDeliveryTime: 25,
         maxDeliveryTime: 45,
         deliveryFee: 3.99,
@@ -409,7 +409,7 @@ export const restaurants = [
       },
       {
         name: "Steakhouse Elite",
-        cuisines: ["American", "Steakhouse"],
+        cuisines: ["Seafood", "Indian"],
         minDeliveryTime: 35,
         maxDeliveryTime: 60,
         deliveryFee: 6.99,
@@ -421,7 +421,7 @@ export const restaurants = [
       },
       {
         name: "Falafel House",
-        cuisines: ["Middle Eastern", "Mediterranean"],
+        cuisines: ["Seafood", "Breakfast"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 3.99,
@@ -433,7 +433,7 @@ export const restaurants = [
       },
       {
         name: "Caribbean Flavors",
-        cuisines: ["Caribbean", "Jamaican"],
+        cuisines: ["Fast Food", "Dessert"],
         minDeliveryTime: 30,
         maxDeliveryTime: 50,
         deliveryFee: 4.99,
@@ -445,7 +445,7 @@ export const restaurants = [
       },
       {
         name: "Ramen House",
-        cuisines: ["Japanese", "Noodles"],
+        cuisines: ["Asian", "Korean"],
         minDeliveryTime: 25,
         maxDeliveryTime: 45,
         deliveryFee: 3.99,
@@ -457,7 +457,7 @@ export const restaurants = [
       },
       {
         name: "BBQ King",
-        cuisines: ["BBQ", "American"],
+        cuisines: ["Burger", "Breakfast"],
         minDeliveryTime: 35,
         maxDeliveryTime: 60,
         deliveryFee: 5.99,
@@ -469,7 +469,7 @@ export const restaurants = [
       },
       {
         name: "Sandwich Studio",
-        cuisines: ["Deli", "American"],
+        cuisines: ["Dessert", "Fast Food"],
         minDeliveryTime: 15,
         maxDeliveryTime: 35,
         deliveryFee: 2.99,
@@ -481,7 +481,7 @@ export const restaurants = [
       },
       {
         name: "Spanish Tapas",
-        cuisines: ["Spanish", "Mediterranean"],
+        cuisines: ["Sushi", "Asian"],
         minDeliveryTime: 30,
         maxDeliveryTime: 50,
         deliveryFee: 4.99,
@@ -493,7 +493,7 @@ export const restaurants = [
       },
       {
         name: "Healthy Bowl",
-        cuisines: ["Healthy", "Salads", "Bowls"],
+        cuisines: ["Healthy", "Sushi", "Vegan"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 3.99,
@@ -505,7 +505,7 @@ export const restaurants = [
       },
       {
         name: "French Bistro",
-        cuisines: ["French", "European"],
+        cuisines: ["Pizza", "Breakfast"],
         minDeliveryTime: 35,
         maxDeliveryTime: 60,
         deliveryFee: 5.99,
@@ -517,7 +517,7 @@ export const restaurants = [
       },
       {
         name: "Seafood Shack",
-        cuisines: ["Seafood", "American"],
+        cuisines: ["Seafood", "Breakfast"],
         minDeliveryTime: 30,
         maxDeliveryTime: 55,
         deliveryFee: 4.99,
@@ -529,7 +529,7 @@ export const restaurants = [
       },
       {
         name: "Street Tacos",
-        cuisines: ["Mexican", "Street Food"],
+        cuisines: ["Burger", "Fast Food"],
         minDeliveryTime: 20,
         maxDeliveryTime: 40,
         deliveryFee: 0,

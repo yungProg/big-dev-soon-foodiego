@@ -7,16 +7,17 @@ const cartOpen = document.querySelector('.cart-open')
 const foodFiltersContainer = document.querySelector('.food-filters-container')
 const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelector('.cancel')]
 const sortPopUpBox = document.querySelector(".sort")
+const isOpenNowRadio = document.querySelector('.open-now')
+const openCheck = document.getElementById('open-now')
 const freeDeliveryRadio = document.querySelector('.free-delivery')
 const stars = document.querySelectorAll('.star-wrapper')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
 
-let methodOfDelivery = 'delivery-btn';
 let currentRating = null;
 let isOpenNow = true;
-let deliveryFee = 2
-let cuisine
+let deliveryFee = null
+let cuisine = null
 
 const foods = [
     {
@@ -118,6 +119,12 @@ document.getElementById('pickup-btn').addEventListener('click', () => {
   freeDeliveryRadio.checked = false
 })
 
+isOpenNowRadio.addEventListener('click', (e) => {
+  openCheck.checked = !openCheck.checked
+  isOpenNow = openCheck.checked
+  filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
+})
+
 function highlightStars(rating) {
   stars.forEach((star, index) => {
     if (index < rating) {
@@ -213,27 +220,24 @@ function displayRestaurants() {
 displayRestaurants()
 
 function filterRestaurants(cuisineSelected, availability, fee, numStars) {
-  console.log(cuisineSelected, availability, typeof fee, !numStars);
 
-  if (!numStars) {
-    matchingRestaurants = restaurants.filter((restaurant) => {
-      console.log(restaurant.cuisines, restaurant.cuisines.includes(cuisineSelected));
-      
-      return (restaurant.cuisines.includes(cuisineSelected) && 
-      restaurant.isOpenNow == availability && 
-      typeof restaurant.deliveryFee == typeof fee)
-    })
+  if (availability) {
+    matchingRestaurants = restaurants.filter(restaurant => restaurant.isOpenNow === availability);
   } else {
-    matchingRestaurants = restaurants.filter((restaurant) => {
-      return (restaurant.cuisines.includes(cuisineSelected) && 
-      restaurant.isOpenNow == availability && 
-      typeof restaurant.deliveryFee == typeof fee &&
-      restaurant.rating - numStars <= 1 &&
-      restaurant.rating - numStars >= 0
-     )
-    })
+    matchingRestaurants = [...restaurants]
   }
-  console.log(matchingRestaurants);
+  if (fee) {
+    const result = matchingRestaurants.filter(restaurant => typeof restaurant.deliveryFee === typeof fee)
+    matchingRestaurants = result
+  }
+  if (cuisineSelected) {
+    const result = matchingRestaurants.filter(restaurant => restaurant.cuisines.includes(cuisineSelected))
+    matchingRestaurants = result
+  }
+  if (numStars) {
+    const result = matchingRestaurants.filter(restaurant => (restaurant.rating - numStars < 1 && restaurant.rating - numStars >= 0))
+    matchingRestaurants = result
+  }
     
   displayRestaurants()
 }
