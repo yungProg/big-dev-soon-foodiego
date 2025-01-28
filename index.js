@@ -7,13 +7,14 @@ const cartOpen = document.querySelector('.cart-open')
 const foodFiltersContainer = document.querySelector('.food-filters-container')
 const toggleSortPopUp = [document.querySelector(".sort-by"), document.querySelector('.cancel')]
 const sortPopUpBox = document.querySelector(".sort")
-const isOpenNowRadio = document.querySelector('.open-now')
 const openCheck = document.getElementById('open-now')
+const deliveryFeeCheck = document.getElementById('free-delivery')
 const freeDeliveryRadio = document.querySelector('.free-delivery')
 const stars = document.querySelectorAll('.star-wrapper')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
 
+let methodOfDelivery
 let currentRating = null;
 let isOpenNow = true;
 let deliveryFee = null
@@ -119,9 +120,13 @@ document.getElementById('pickup-btn').addEventListener('click', () => {
   freeDeliveryRadio.checked = false
 })
 
-isOpenNowRadio.addEventListener('click', (e) => {
-  openCheck.checked = !openCheck.checked
+openCheck.addEventListener('change', () => {
   isOpenNow = openCheck.checked
+  filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
+})
+
+deliveryFeeCheck.addEventListener('change', () => {
+  deliveryFee = deliveryFeeCheck.checked ? "Free" : null
   filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
 })
 
@@ -227,16 +232,16 @@ function filterRestaurants(cuisineSelected, availability, fee, numStars) {
     matchingRestaurants = [...restaurants]
   }
   if (fee) {
-    const result = matchingRestaurants.filter(restaurant => typeof restaurant.deliveryFee === typeof fee)
-    matchingRestaurants = result
+    const result = matchingRestaurants.filter(restaurant => restaurant.deliveryFee === fee)
+    matchingRestaurants = [...result]
   }
   if (cuisineSelected) {
     const result = matchingRestaurants.filter(restaurant => restaurant.cuisines.includes(cuisineSelected))
-    matchingRestaurants = result
+    matchingRestaurants = [...result]
   }
   if (numStars) {
     const result = matchingRestaurants.filter(restaurant => (restaurant.rating - numStars < 1 && restaurant.rating - numStars >= 0))
-    matchingRestaurants = result
+    matchingRestaurants = [...result]
   }
     
   displayRestaurants()
