@@ -11,6 +11,11 @@ const openCheck = document.getElementById('open-now')
 const deliveryFeeCheck = document.getElementById('free-delivery')
 const freeDeliveryRadio = document.querySelector('.free-delivery')
 const stars = document.querySelectorAll('.star-wrapper')
+//sorting criteria
+const sortByRecommendation = document.getElementById('recommend')
+const sortByAscending = document.getElementById('a-z')
+const sortByDescending = document.getElementById('z-a')
+const sortByDistance = document.getElementById('distance')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
 
@@ -246,3 +251,20 @@ function filterRestaurants(cuisineSelected, availability, fee, numStars) {
     
   displayRestaurants()
 }
+
+sortByRecommendation.addEventListener('click', () => {
+  matchingRestaurants.sort()
+  displayRestaurants()
+})
+sortByAscending.addEventListener('click', () => {
+  matchingRestaurants.sort((a, b) => a.name.localeCompare(b.name))
+  displayRestaurants()
+})
+sortByDescending.addEventListener('click', () => {
+  matchingRestaurants.sort((a, b) => b.name.localeCompare(a.name))
+  displayRestaurants()
+})
+sortByRecommendation.addEventListener('click', () => {
+  matchingRestaurants.sort()
+  displayRestaurants()
+})
