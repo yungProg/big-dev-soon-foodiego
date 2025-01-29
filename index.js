@@ -18,12 +18,14 @@ const sortByDescending = document.getElementById('z-a')
 const sortByDistance = document.getElementById('distance')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
+const sortSubmit = document.querySelector('.submit')
 
 let methodOfDelivery
 let currentRating = null;
 let isOpenNow = true;
 let deliveryFee = null
 let cuisine = null
+let sortBy = 'recommend'
 
 const foods = [
     {
@@ -252,19 +254,30 @@ function filterRestaurants(cuisineSelected, availability, fee, numStars) {
   displayRestaurants()
 }
 
-sortByRecommendation.addEventListener('click', () => {
-  matchingRestaurants.sort()
-  displayRestaurants()
+sortByRecommendation.addEventListener('click', (e) => {
+  sortBy = e.target.getAttribute('data-value')
 })
-sortByAscending.addEventListener('click', () => {
-  matchingRestaurants.sort((a, b) => a.name.localeCompare(b.name))
-  displayRestaurants()
+sortByAscending.addEventListener('click', (e) => {
+  sortBy = e.target.getAttribute('data-value')
 })
-sortByDescending.addEventListener('click', () => {
-  matchingRestaurants.sort((a, b) => b.name.localeCompare(a.name))
-  displayRestaurants()
+sortByDescending.addEventListener('click', (e) => {
+  sortBy = e.target.getAttribute('data-value')
 })
-sortByRecommendation.addEventListener('click', () => {
-  matchingRestaurants.sort()
+sortByDistance.addEventListener('click', (e) => {
+  sortBy = e.target.getAttribute('data-value')
+})
+
+sortSubmit.addEventListener('click', () => {
+  if (sortBy == 'Recommend') {
+    matchingRestaurants.sort()
+  } else if (sortBy == 'Alphabetical order (A-Z)') {
+    matchingRestaurants.sort((a, b) => a.name.localeCompare(b.name))
+  } else if (sortBy == 'Alphabetical order (Z-A)') {
+    matchingRestaurants.sort((a, b) => b.name.localeCompare(a.name))
+  }else if (sortBy == 'Distance') {
+    matchingRestaurants.sort()
+  }
+  document.querySelector('.sort-type').textContent = sortBy
   displayRestaurants()
+  sortPopUpBox.classList.toggle('hide')
 })
