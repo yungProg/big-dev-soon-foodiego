@@ -19,6 +19,8 @@ const sortByDistance = document.getElementById('distance')
 const renderedRestaurants = document.querySelector('.displayed-restaurants')
 const restaurantCardTemplate = document.querySelector('.card-template')
 const sortSubmit = document.querySelector('.submit')
+//search
+const searchBar = document.querySelector('.search-bar')
 
 let methodOfDelivery
 let currentRating = null;
@@ -269,14 +271,14 @@ sortByDistance.addEventListener('click', (e) => {
 
 sortSubmit.addEventListener('click', () => {
   sortRestaurants()
-  document.querySelector('.sort-type').textContent = sortBy
   displayRestaurants()
+  document.querySelector('.sort-type').textContent = sortBy
   sortPopUpBox.classList.toggle('hide')
 })
 
 function sortRestaurants() {
   if (sortBy == 'Recommend') {
-    matchingRestaurants.sort((a, b) => a.rating - b.rating)
+    matchingRestaurants.sort((a, b) => (b.rating * b.numReviews) - (a.rating - a.numReviews))
   } else if (sortBy == 'Alphabetical order (A-Z)') {
     matchingRestaurants.sort((a, b) => a.name.localeCompare(b.name))
   } else if (sortBy == 'Alphabetical order (Z-A)') {
@@ -285,3 +287,6 @@ function sortRestaurants() {
     matchingRestaurants.sort()
   }
 }
+
+searchBar.addEventListener('submit', (e) => console.log(e)
+)

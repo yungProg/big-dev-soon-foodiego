@@ -288,7 +288,7 @@ a {
   position: relative;
 }
 
-.search {
+.search-bar {
   flex: 80% 0 1;
   border: none;
   outline: 2px solid rgba(0, 0, 0, 0.3);
@@ -297,7 +297,7 @@ a {
   background-color: #e4e4e4;
 }
 
-.search::placeholder {
+.search-bar::placeholder {
   color: #000;
 }
 
@@ -402,6 +402,15 @@ a {
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.3);
 }
+
+.no-result-container {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
 .hide {
   display: none;
 }
