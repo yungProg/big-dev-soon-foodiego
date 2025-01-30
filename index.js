@@ -250,7 +250,7 @@ function filterRestaurants(cuisineSelected, availability, fee, numStars) {
     const result = matchingRestaurants.filter(restaurant => (restaurant.rating - numStars < 1 && restaurant.rating - numStars >= 0))
     matchingRestaurants = [...result]
   }
-    
+  sortRestaurants()
   displayRestaurants()
 }
 
@@ -268,8 +268,15 @@ sortByDistance.addEventListener('click', (e) => {
 })
 
 sortSubmit.addEventListener('click', () => {
+  sortRestaurants()
+  document.querySelector('.sort-type').textContent = sortBy
+  displayRestaurants()
+  sortPopUpBox.classList.toggle('hide')
+})
+
+function sortRestaurants() {
   if (sortBy == 'Recommend') {
-    matchingRestaurants.sort()
+    matchingRestaurants.sort((a, b) => a.rating - b.rating)
   } else if (sortBy == 'Alphabetical order (A-Z)') {
     matchingRestaurants.sort((a, b) => a.name.localeCompare(b.name))
   } else if (sortBy == 'Alphabetical order (Z-A)') {
@@ -277,7 +284,4 @@ sortSubmit.addEventListener('click', () => {
   }else if (sortBy == 'Distance') {
     matchingRestaurants.sort()
   }
-  document.querySelector('.sort-type').textContent = sortBy
-  displayRestaurants()
-  sortPopUpBox.classList.toggle('hide')
-})
+}
