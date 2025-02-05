@@ -253,7 +253,7 @@ function filterRestaurants(cuisineSelected, availability, fee, numStars) {
     matchingRestaurants = [...result]
   }
   sortRestaurants()
-  displayRestaurants()
+  displayRestaurants()  
 }
 
 sortByRecommendation.addEventListener('click', (e) => {
@@ -288,5 +288,41 @@ function sortRestaurants() {
   }
 }
 
-searchBar.addEventListener('submit', (e) => console.log(e)
-)
+function renderNoResult() {
+  const template = document.querySelector('.no-result-temp')
+  const cloneTemp = template.content.cloneNode(true)
+  const resetSearchBtn = cloneTemp.querySelector('.reset-search-btn')
+  resetSearchBtn.addEventListener('click', () => {
+  methodOfDelivery = undefined
+  currentRating = null;
+  isOpenNow = true;
+  deliveryFee = null
+  cuisine = null
+  sortBy = 'recommend'
+  renderedRestaurants.classList.remove('no-result')
+  renderedRestaurants.innerHTML = ''
+  matchingRestaurants = [...restaurants]
+  filterRestaurants(cuisine, isOpenNow, deliveryFee, currentRating)
+  })
+  renderedRestaurants.classList.add('no-result')
+  renderedRestaurants.appendChild(cloneTemp)
+}
+
+searchBar.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+  const result = restaurants.filter(restaurant => ['name', 'cuisines'].some(item => {
+    if (item == 'cuisines') {
+      return restaurant[item].join(' ').toLocaleLowerCase().includes(e.target.value.trim())
+    } else {
+      return restaurant[item].toLocaleLowerCase().includes(e.target.value.trim())
+    }    
+  }))
+  matchingRestaurants = [...result]
+  sortRestaurants()
+  displayRestaurants()
+  }
+  if (matchingRestaurants.length == 0) {
+    renderNoResult()
+  }
+})

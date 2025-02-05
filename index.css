@@ -349,6 +349,7 @@ a {
 
 .restaurants-container {
   margin-top: 3vh;
+  height: calc(100% - 3vh);
 }
 
 .number-opened {
@@ -360,6 +361,10 @@ a {
   flex-direction: column;
   gap: 4vh;
   margin-top: 3vh;
+}
+
+.displayed-restaurants.no-result {
+  height: calc(100% - 7vh);
 }
 
 .restaurant-card {
@@ -404,11 +409,19 @@ a {
 }
 
 .no-result-container {
-  background-color: chocolate;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1vh;
+  margin-top: 20%;
+}
+
+.reset-search-btn {
+  background-color: var(--primary-color2);
+  font-size: 1.2rem;
+  color: var(--primary-color1);
+  padding: 1rem;
+  border-radius: 2.2rem;
 }
 
 .hide {
