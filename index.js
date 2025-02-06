@@ -27,7 +27,7 @@ let currentRating = null;
 let isOpenNow = true;
 let deliveryFee = null
 let cuisine = null
-let sortBy = 'recommend'
+let sortBy = 'Recommend'
 
 const foods = [
     {
@@ -229,6 +229,9 @@ function displayRestaurants() {
     clone.querySelector('.restaurant-address').textContent = restaurant.address
     renderedRestaurants.appendChild(clone)
   })
+  if (matchingRestaurants.length == 0) {
+    renderNoResult()
+  }
 }
 
 displayRestaurants()
@@ -298,7 +301,12 @@ function renderNoResult() {
   isOpenNow = true;
   deliveryFee = null
   cuisine = null
-  sortBy = 'recommend'
+  sortBy = 'Recommend'
+  deliveryFeeCheck.checked = false
+  openCheck.checked = true
+  highlightStars(0)
+  document.querySelector('.sort-type').textContent = sortBy
+  sortRestaurants()
   renderedRestaurants.classList.remove('no-result')
   renderedRestaurants.innerHTML = ''
   matchingRestaurants = [...restaurants]
@@ -321,8 +329,5 @@ searchBar.addEventListener('keydown', (e) => {
   matchingRestaurants = [...result]
   sortRestaurants()
   displayRestaurants()
-  }
-  if (matchingRestaurants.length == 0) {
-    renderNoResult()
   }
 })
